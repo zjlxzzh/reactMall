@@ -1,0 +1,36 @@
+@mixin button($background-color:$button-background-color, $color:$button-color, $border-color:$button-border-color){
+    display: inline-block;
+    background-color: $background-color;
+    color: $color;
+    border-radius: $button-border-radius;
+    border: 1px solid $border-color;
+    cursor: pointer;
+    height: $button-default-height;
+    line-height: $button-default-height - 2;
+    padding: 0 $button-default-padding-LR;
+    font-size: $button-default-font-size;
+    text-decoration: none;
+    .#{$css-prefix}icon-right,
+    .#{$css-prefix}icon{
+        font-size: $button-default-font-size;
+    }
+    .#{$css-prefix}icon{
+        padding-right: 5px;
+    }
+    .#{$css-prefix}icon-right{
+        padding-left: 5px;
+    }
+    font-weight: 300;
+}
+
+@mixin button-size($height:$button-default-height, $font-size:$button-default-font-size, $paddingLR:$button-default-padding-LR){
+    height: $height;
+    line-height: $height - 2;
+    padding: 0 $paddingLR;
+    font-size: $font-size;
+    .#{$css-prefix}icon-right,
+    .#{$css-prefix}icon{
+        font-size: $font-size;
+    }
+
+}

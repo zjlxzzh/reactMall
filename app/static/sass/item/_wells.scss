@@ -1,0 +1,11 @@
+@charset "utf-8";
+
+@import "../mixins/wells";
+
+.#{$css-prefix}wells-primary{
+    @include wells();
+}
+
+.#{$css-prefix}wells-ghost{
+    @include wells($wells-ghost-color, $wells-ghost-background-color, $wells-ghost-border-color);
+}

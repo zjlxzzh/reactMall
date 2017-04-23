@@ -1,0 +1,36 @@
+.#{$css-prefix}arrow{
+  @extend .absolute;
+  height: $arrow-height;
+  width: $arrow-width;
+
+  &.#{$css-prefix}arrow-top-left,
+  &.#{$css-prefix}arrow-top-right{
+    top: -($arrow-height);
+    border-bottom: ($arrow-height - 2) solid $arrow-border-color;
+    border-left: $arrow-width/2 solid transparent;
+    border-right: $arrow-width/2 solid transparent;
+    span{
+      @extend .absolute;
+      height: $arrow-height - 2;
+      width: $arrow-width - 2;
+      top: 2px;
+      left: -($arrow-width/2 - 1);
+      border-bottom: ($arrow-height - 3) solid $arrow-color;
+      border-left: ($arrow-width/2 - 1) solid transparent;
+      border-right: ($arrow-width/2 - 1) solid transparent;
+    }
+  }
+
+  &.#{$css-prefix}arrow-error-top{
+    border-bottom-color: $arrow-error-border-color;
+    span{
+      border-bottom-color: $arrow-error-color;
+    }
+  }
+  &.#{$css-prefix}arrow-top-left{
+    left: 14px;
+  }
+  &.#{$css-prefix}arrow-top-right{
+    right: 14px;
+  }
+}

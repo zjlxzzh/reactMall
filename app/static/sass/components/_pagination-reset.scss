@@ -1,0 +1,25 @@
+.#{$css-prefix}pagination{
+    background-color: #fff;
+    padding-right: 10px;
+    .#{$css-prefix}pagination-simple-wrap{
+        .#{$css-prefix}pagination{
+            .#{$css-prefix}pagination-next,
+            .#{$css-prefix}pagination-prev{
+                border: 1px solid $border-color-default;
+                margin-right: 5px;
+            }
+        }
+    }
+    .#{$css-prefix}pagination-wrap{
+        .#{$css-prefix}pagination{
+            .#{$css-prefix}pagination-jumper-value{
+                margin-right: 0;
+            }
+            .#{$css-prefix}pagination-jumper-go{
+                height: 24px;
+                line-height: 22px;
+                border-radius: 0;
+            }
+        }
+    }
+}

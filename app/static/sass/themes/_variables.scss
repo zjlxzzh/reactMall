@@ -1,0 +1,346 @@
+@charset "utf-8";
+
+/******************************  start default  ******************************/
+$css-prefix:                    fm- !default;
+
+// default color
+$border-radius:                 8px !default;
+$primary-color:                 #4988dd !default;
+$danger-color:                  #ff4930 !default;
+$success-color:                 #61db37 !default;
+$warning-color:                 #f56767 !default;
+$info-color:                    #22ace4 !default;
+$disable-color:                 #cecece !default;
+/******************************  end default  ******************************/
+
+
+/******************************  start layout  ******************************/
+$layout-bg:						#fff !default;
+$layout-max-width:              1440px !default;
+$layout-min-width:              1280px !default;
+
+$header-height:             	70px !default;
+$header-line-height:            $header-height !default;
+$header-bg:						#3dadf5 !default;
+$header-border-bottom-color:	#dedede !default;
+$header-padding-lr:         	20px !default;
+$header-padding-left:       	$header-padding-lr !default;
+$header-padding-right:      	$header-padding-lr !default;
+$header-z-index:            	100 !default;
+
+
+$footer-height:             70px !default;
+$footer-line-height:        $footer-height !default;
+$footer-border-top-color:   #dedede !default;
+$footer-bg:                 #fff !default;
+
+
+$aside-width:               240px !default;
+$aside-bg:                  #fff !default;
+$aside-color:               #333 !default;
+$aside-border-right-color:  #dedede !default;
+$aside-padding-top:         $header-height !default;
+$aside-z-index:             99 !default;
+$aside-nav-padding-top:     20px !default;
+$aside-nav-padding-left:    20px !default;
+$aside-item-height:         26px !default;
+$aside-item-line-height:    $aside-item-height !default;
+$aside-item-bg:             #fff !default;
+$aside-item-color:          $aside-color !default;
+$aside-item-active-bg:      #fff !default;
+$aside-item-active-color:   #3a75c4 !default;
+$aside-sub-item-height:     26px !default;
+$aside-sub-item-line-height:26px !default;
+$aside-sub-item-bg:         transparent !default;
+$aside-sub-item-color:      $aside-color !default;
+$aside-sub-item-active-bg:  $aside-item-active-bg !default;
+$aside-sub-item-active-color:$aside-item-active-color !default;
+
+$contain-width:             100% !default;
+$contain-bg:                $layout-bg !default;
+$contain-border-left-color: $aside-border-right-color !default;
+$contain-padding-top:       $header-height !default;
+$contain-padding-lr:        $header-padding-lr !default;
+
+$main-background-color:      #fff !default;
+
+
+$grid-columns:              24 !default;
+/******************************  end layout  ******************************/
+
+
+/****  background color  ****/
+$bg-gray:                   #eee !default;
+
+/******************************  start font  ******************************/
+
+/****  font family  ****/
+$font-family:               "Helvetica Neue",Helvetica,Arial,"Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei",sans-serif !default;
+$font-family-number:         "Helvetica Neue", 'Microsoft YaHei' !default;
+$font-weight:				300 !default;
+
+/****  font color  ****/
+$font-color-base:           #333 !default;
+$font-color-white:          #fff !default;
+$font-color-darker:         $font-color-base !default;
+$font-color-dark:           #666 !default;
+$font-color-grayer:         #999 !default;
+$font-color-gray:           #cecece !default;
+$font-color-link:           #3a75c4 !default;
+$font-color-link-hover:     #e36837 !default;
+
+/****  font size  ****/
+$font-size-default:         14px !default;
+$font-size-logo:            32px !default;
+$font-size-number-lager:    38px !default;
+$font-size-title-lager:     18px !default;
+$font-size-title:           16px !default;
+$font-size-small:           12px !default;
+$font-size-h1:              $font-size-logo !default;
+$font-size-h2:              22px !default;
+$font-size-h3:              18px !default;
+
+/****  font line height  ****/
+$font-line-height-default:  1.5 !default;
+
+$font-text-decoration:      underline !default;
+
+/******************************  end font  ******************************/
+
+
+/******************************  start border  ******************************/
+
+/****  border color  ****/
+$border-color-default:  #dadada !default;
+$border-color-dark:     #ccc !default;
+
+/******************************  end border  ******************************/
+
+
+
+/******************************  start button  ******************************/
+$button-border-radius:                  $border-radius/2 !default;
+
+$button-background-color:               #eee !default;
+$button-border-color:                   #dcdcdc !default;
+$button-color:                          #333333 !default;
+
+
+$button-primary-background-color:       $primary-color !default;
+$button-primary-color:                  #fff !default;
+$button-primary-border-color:           $primary-color !default;
+
+
+$button-disable-background-color:       $disable-color !default;
+$button-disable-color:                  #fff !default;
+$button-disable-border-color:           $disable-color !default;
+
+
+$button-danger-background-color:        $danger-color !default;
+$button-danger-color:                   #fff !default;
+$button-danger-border-color:            $danger-color !default;
+
+$button-warning-background-color:        $warning-color !default;
+$button-warning-color:                   #fff !default;
+$button-warning-border-color:            $warning-color !default;
+
+
+$button-hollow-background-color:        #fff !default;
+$button-primary-hollow-color:           $primary-color !default;
+$button-primary-hollow-border-color:    $primary-color !default;
+
+$button-danger-hollow-color:            $danger-color !default;
+$button-danger-hollow-border-color:     $danger-color !default;
+
+
+$button-success-background-color:       $success-color !default;
+$button-success-color:                  #fff !default;
+$button-success-border-color:           $success-color !default;
+
+$button-info-background-color:       	$info-color !default;
+$button-info-color:                  	#fff !default;
+$button-info-border-color:           	$info-color !default;
+
+$button-ghost-background-color:         #fff !default;
+$button-ghost-color:                    #999 !default;
+$button-ghost-border-color:             $border-color-default !default;
+
+
+$button-large-height:                   34px !default;
+$button-large-padding-LR:               14px !default;
+$button-large-font-size:                14px !default;
+
+$button-default-height:                 28px !default;
+$button-default-padding-LR:             14px !default;
+$button-default-font-size:              14px !default;
+
+$button-small-height:                   24px !default;
+$button-small-padding-LR:               10px !default;
+$button-small-font-size:                12px !default;
+
+
+
+/******************************  end button  ******************************/
+
+
+
+
+/******************************  start point  ******************************/
+
+$point-size:                            10px !default;
+
+$point-blue:                            #51aff1 !default;
+$point-green:                           #61db37 !default;
+$point-yellow:                          #f2d300 !default;
+$point-purple:                          #a245e3 !default;
+
+
+
+/******************************  end point  ******************************/
+
+
+
+
+
+/******************************  start arrow  ******************************/
+$arrow-width:                         8px !default;
+$arrow-height:                        8px !default;
+$arrow-color:                         #fff !default;
+$arrow-border-color:                  $border-color-default !default;
+
+$arrow-error-color:                   #ffdad5 !default;
+$arrow-error-border-color:            #ff4930 !default;
+
+/******************************  end arrow  ******************************/
+
+
+
+
+
+/******************************  start wells  ******************************/
+
+$wells-border-radius:                   $border-radius/2 !default;
+$wells-primary-background-color:        $primary-color !default;
+$wells-primary-color:                   #fff !default;
+$wells-primary-border-color:            $primary-color !default;
+$wells-ghost-background-color:          #fff !default;
+$wells-ghost-color:                     #333 !default;
+$wells-ghost-border-color:              $border-color-default !default;
+
+/******************************  end wells  ******************************/
+
+
+/******************************  start table  ******************************/
+
+$table-space:                       10px 8px !default;       // table th/td  padding
+$table-th-color:                    #333 !default;
+$table-border-radius:               $border-radius/2 !default;
+$table-th-bg-color:                 #f4f4f4 !default;
+$table-th-line-height:              22px !default;
+$table-th-font-size:                14px !default;
+$table-th-font-weight:              normal !default;
+$table-tr-even-gb-color:            #f8fafa !default;
+$table-tr-odd-gb-color:             #fff !default;
+$table-td-line-height:              1.6em !default;
+$table-border-color:                $border-color-default !default;
+
+/******************************  end table  ******************************/
+
+
+/******************************  start progress  ******************************/
+
+$progress-height:                   3px !default;
+$progress-border-radius:            0px !default;
+$progress-bg-color:                 #f3f3f3 !default;
+$progress-color:                    $primary-color !default;
+$progress-default-time:             2s !default;
+$progress-default-width:            95% !default;
+
+/******************************  end progress  ******************************/
+
+
+/******************************  start form  ******************************/
+$form-border-color:                 $border-color-default !default;
+$form-border-radius:                $border-radius/2 !default;
+
+$form-font-size:                    12px !default;
+
+$form-input-height:                 28px !default;
+
+$form-input-checkbox-size:          14px !default;
+$form-input-checkbox-color:         #cecece !default;
+$form-input-checkbox-checked-color: $primary-color !default;
+
+$form-input-radio-size:             16px !default;
+$form-input-radio-color:            #cecece !default;
+$form-input-radio-checked-color:    $primary-color !default;
+/******************************  end form  ******************************/
+
+
+/******************************  start select  ******************************/
+$select-font-size:                  $form-font-size !default;
+$select-border-color:               $form-border-color !default;
+$select-height:                     28px !default;
+$select-width:                      auto !default;
+$select-bg:                         #fff !default;
+$select-search-width:               200px !default;
+$select-border-radius:              $form-border-radius !default;
+$select-list-border-radius:         $form-border-color !default;
+$select-icon-width:                 30px !default;
+$select-padding-right:              $select-icon-width + 10 !default;
+$select-value-border:               1px solid $select-border-color !default;
+$select-value-color:                #333 !default;
+$select-value-line-height:          $select-height - 2px !default;
+$select-icon-color:                $select-value-color;
+
+/******************************  end select  ******************************/
+
+
+/******************************  start autocomplete  ******************************/
+$autocomplete-border-radius:        $form-border-radius !default;
+$autocomplete-border-color:         $form-border-color !default;
+$autocomplete-font-size:            $form-font-size !default;
+$autocomplete-height:               28px !default;
+$autocomplete-width:                100% !default;
+$autocomplete-icon-width:           30px !default;
+$autocomplete-selected-bg-color:    #e5e5e5 !default;
+/******************************  end autocomplete  ******************************/
+
+
+/******************************  start pagination  ******************************/
+$pagination-font-size:              12px !default;
+$pagination-color:                  #666 !default;
+$pagination-current-color:          #fff !default;
+$pagination-current-bg-color:       $primary-color !default;
+$pagination-current-border-radius:  100% !default;
+$pagination-disable-color:          #ccc !default;
+$pagination-total-color:            #666 !default;
+$pagination-total-font-size:        12px !default;
+/******************************  end pagination  ******************************/
+
+
+/******************************  start datepicker  ******************************/
+$datepicker-icon-width:                         30px !default;
+$datepicker-icon-bg-color:                      #f4f4f4 !default;
+$datepicker-icon-color:                         #9d9d9d !default;
+$datepicker-date-item-list-padding:             5px !default;
+$datepicker-date-item-width:                    28px !default;
+$datepicker-date-item-height:                   22px !default;
+$datepicker-date-item-padding:                  3px !default;
+$datepicker-current-bg-color:                   $primary-color !default;
+$datepicker-current-color:                      #fff !default;
+$datepicker-date-item-list-padding:             5px !default;
+$datepicker-date-item-list-width:               $datepicker-date-item-width * 7 + ($datepicker-date-item-list-padding * 2) !default;
+
+
+/******************************  end datepicker  ******************************/
+
+
+/******************************  start match  ******************************/
+$match-height:                                8px;
+$match-color:                                 #6da0e4;
+$match-border-color:                          #6da0e4;
+$match-bg-color:                              #fff;
+/******************************  end match  ******************************/
+
+

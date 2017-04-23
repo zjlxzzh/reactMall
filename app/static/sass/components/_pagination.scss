@@ -1,0 +1,93 @@
+@charset "utf-8";
+
+@import "../animation/progress";
+
+.#{$css-prefix}pagination{
+    color: $pagination-color;
+    a{
+        text-decoration: none;
+        color: $pagination-color;
+        float: left;
+        font-size: $pagination-font-size;
+        padding: 5px 5px;
+        line-height: 1em;
+        min-width: 23px;
+        text-align: center;
+        span[class^="icon"]{
+            font-size: $pagination-font-size;
+        }
+    }
+    .#{$css-prefix}pagination-disable{
+        cursor: not-allowed;
+        color: $pagination-disable-color;
+    }
+    .#{$css-prefix}pagination-total{
+        @extend .pull-right;
+        @extend .pr10;
+        color: $pagination-total-color;
+        font-size: $pagination-total-font-size;
+        line-height: 24px;
+    }
+    .#{$css-prefix}pagination{
+        @extend .pull-right;
+        .#{$css-prefix}pagination-item{
+            margin-top: 1px;
+            &.#{$css-prefix}pagination-current{
+                background-color: $pagination-current-bg-color;
+                border-radius: $pagination-current-border-radius;
+                color: $pagination-current-color;
+                cursor: default;
+            }
+        }
+        .#{$css-prefix}select-wrap,
+        .#{$css-prefix}pagination-size-changer{
+            @extend .pull-left;
+            margin: 0 5px;
+            height: 24px;
+            width: auto;
+            .#{$css-prefix}select-value{
+                height: 24px;
+                line-height: 22px;
+                font-size: 12px;
+                padding: 0 30px 0 8px;
+                .#{$css-prefix}select-icon{
+                    background-color: transparent;
+                    border-left: 0;
+                    @extend .icon-down;
+                    font-size: 12px;
+                }
+            }
+            .#{$css-prefix}select-list{
+                top: 24px;
+            }
+        }
+        .#{$css-prefix}pagination-jumper-value{
+            @extend .pull-left;
+            width: 50px;
+            margin: 0 10px 0 5px;
+            height: 24px;
+            padding: 0 3px;
+        }
+        .#{$css-prefix}pagination-jumper-go{
+            @extend .pull-left;
+        }
+    }
+}
+
+.#{$css-prefix}pagination{
+    .#{$css-prefix}pagination-simple-wrap{
+        float: none;
+        display: inline-block;
+        .#{$css-prefix}pagination-total,
+        .#{$css-prefix}pagination{
+            float: none;
+            display: inline-block;
+        }
+        .#{$css-prefix}pagination{
+            a{
+                float: none;
+            }
+        }
+    }
+}
+

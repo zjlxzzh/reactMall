@@ -1,0 +1,116 @@
+@charset "utf-8";
+
+$font-family:                   "Hiragino Sans GB", "Microsoft YaHei","WenQuanYi Micro Hei",sans-serif;
+
+$css-prefix:                    fm-;
+
+$border-radius:                 8px;
+
+$primary-color:                 #4988dd;
+$danger-color:                  #ae2c00;
+$success-color:                 #57c059;
+$warning-color:                 #f45b63;
+$info-color:                    #22ace4;
+$disable-color:                 #cecece;
+
+$layout-max-width:              1418px;
+$layout-min-width:              1258px;
+
+$border-color-default:          #e5e5e5;
+
+$aside-width:                   240px;
+$aside-z-index:                 101;
+$aside-bg:                      #fff;
+$aside-item-bg:                 $aside-bg;
+$aside-item-height:             60px;
+$aside-item-line-height:        $aside-item-height - 1;
+$aside-sub-item-bg:             #fff;
+$aside-sub-item-height:         38px;
+$aside-sub-item-line-height:    38px;
+$aside-sub-item-active-color:   #3074b5;
+
+
+// table
+$table-space:                   4px 10px;
+$table-th-bg-color:             #f0f0f0;
+$table-tr-even-gb-color:        transparent;
+$table-tr-odd-gb-color:         transparent;
+$table-td-line-height:          22px;
+
+
+// button
+$button-default-font-size:      12px;
+$button-small-height:           22px;
+
+$button-ghost-color:            #666;
+
+
+// select
+$select-value-color:            #666;
+
+// form
+$form-input-height:             28px;
+
+
+
+
+/******************  新版本样式 ******************/
+
+$success-color:                       #57c059;
+
+$border-radius:                 4px;
+
+$layout-bg:                     #efefef;
+
+$main-background-color:         $layout-bg;
+
+// 侧边栏
+$aside-width:                   170px;
+$aside-z-index:                 101;
+$aside-bg:                      #363b3f;
+$aside-color:                   #fff;
+$aside-border-right-color:      #f45b63;
+$aside-item-bg:                 $aside-bg;
+$aside-item-active-bg:          #202325;
+$aside-item-active-color:       $aside-color;
+$aside-item-height:             48px;
+$aside-item-line-height:        $aside-item-height;
+$aside-sub-item-bg:             $aside-bg;
+$aside-sub-item-height:         38px;
+$aside-sub-item-line-height:    $aside-sub-item-height;
+$aside-sub-item-color:          #8d8d8d;
+$aside-sub-item-active-color:   #fff;
+
+// table
+$table-space:                   4px 15px;
+$table-border-radius:           0;
+
+$table-th-bg-color:             #98aab9;
+$table-th-color:                #fff;
+$table-th-line-height:          32px;
+$table-th-font-size:            14px;
+
+$table-td-line-height:          34px;
+$table-tr-even-gb-color:        #f9fafa;
+$table-tr-odd-gb-color:         #fff;
+
+// select
+$select-bg:                     #fff;
+$select-border-radius:          16px;
+$select-value-border:           1px solid #98aab9;
+$select-value-color:            #363b3f;
+
+
+// button
+$button-border-radius:          18px;
+$button-background-color:       #efefef;
+$button-border-color:           $button-background-color;
+$button-color:                  #666;
+
+$button-small-height:           24px;
+
+$button-ghost-color:                    #363b3f;
+$button-ghost-border-color:             #98aab9;
+
+// footer
+$footer-bg:                     transparent;

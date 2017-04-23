@@ -1,0 +1,33 @@
+// 浏览器兼容性
+
+@mixin transform($rule){
+    -ms-transform: $rule;
+    -webkit-transform: $rule;
+    -moz-transform: $rule;
+    -o-transform: $rule;
+    transform: $rule;
+}
+
+@mixin transform-origin($rule){
+    -ms-transform-origin: $rule;
+    -webkit-transform-origin: $rule;
+    -moz-transform-origin: $rule;
+    -o-transform-origin: $rule;
+    transform-origin: $rule;
+}
+
+@mixin transition($rule){
+    -ms-transition: $rule;
+    -webkit-transition: $rule;
+    -moz-transition: $rule;
+    -o-transition: $rule;
+    transition: $rule;
+};
+
+@mixin transition-delay($rule){
+    -ms-transition-delay: $rule;
+    -webkit-transition-delay: $rule;
+    -moz-transition-delay: $rule;
+    -o-transition-delay: $rule;
+    transition-delay: $rule;
+}

@@ -1,0 +1,65 @@
+@import "../mixins/icon";
+//@import "../animation/icon";
+
+
+@font-face {font-family: "iconfont";
+    src: url('../fonts/iconfont.eot'); /* IE9*/
+    src: url('../fonts/iconfont.eot#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('../fonts/iconfont.woff') format('woff'), /* chrome, firefox */
+    url('../fonts/iconfont.ttf') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+    url('../fonts/iconfont.svg#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.iconfont {
+    font-family:"iconfont" !important;
+    font-size:16px;
+    font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-head {@include iconfont("\e67f"); }
+.icon-head1 { @include iconfont("\e600"); }
+.icon-head3 { @include iconfont("\e610"); }
+
+
+
+//.icon-loading{
+//    @include iconfont("\e617"!important);
+//    &:before{
+//        -webkit-animation: loadingCircle 1s infinite linear;
+//        animation: loadingCircle 1s infinite linear;
+//        display: inline-block;
+//    }
+//}
+//
+//.icon-loading-stop{
+//    position: relative;
+//    @include iconfont("\e617"!important);
+//    &:after{
+//        content: "\e617"!important;
+//        position: absolute;
+//        @include transform(scale(1) rotate(-180deg));
+//        top: 0;
+//        left: 0;
+//        height: 100%;
+//        line-height: 100%;
+//    }
+//}
+//
+//.icon-loading-point{
+//    span{
+//        display: inline-block;
+//    }
+//    .point1{
+//        animation: loadingPointer1 1s infinite linear;
+//    }
+//    .point2{
+//        animation: loadingPointer2 1s infinite linear;
+//    }
+//    .point3{
+//        animation: loadingPointer3 1s infinite linear;
+//    }
+//}
+

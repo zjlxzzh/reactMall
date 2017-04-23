@@ -1,0 +1,182 @@
+
+.#{$css-prefix}select-wrap{
+    display: inline-block;
+    position: relative;
+    z-index: 100;
+    font-size: $select-font-size;
+    width: $select-width;
+    &.disabled{
+        opacity: .4;
+    }
+
+    // search input and select
+    .#{$css-prefix}select-icon{
+        @extend .absolute;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        width: $select-icon-width;
+        text-align: center;
+        color: #9d9d9d;
+        border-bottom-right-radius: $select-border-radius;
+        border-top-right-radius: $select-border-radius;
+    }
+
+    // select
+    .#{$css-prefix}select-value{
+        width: auto;
+        border: $select-value-border;
+        border-radius: $select-border-radius;
+        padding: 0 $select-padding-right 0 10px;
+        box-sizing: border-box;
+        height: $select-height;
+        line-height: $select-value-line-height;
+        cursor: pointer;
+        position: relative;
+        display: block;
+        transition: 0.5s linear all;
+        .#{$css-prefix}select-value-inner{
+            transition: 0.5s linear all;
+            white-space: nowrap;
+            width: 100%;
+            line-height: $select-height - 2px;
+            overflow: hidden;
+            color: $select-value-color;
+        }
+        .#{$css-prefix}select-icon{
+            @extend .icon-down;
+            font-size: 12px!important;
+            cursor: pointer;
+            @include transform(rotate(0deg));
+            @include transition(transform 1s);
+            border-right: 0;
+            color: $select-icon-color;
+            &.open{
+                @include transform(rotate(180deg));
+                @include transition(transform 1s);
+                border-left: 0;
+                border-right: 1px solid #c9c9c9;
+                border-top-right-radius: 0;
+                border-bottom-right-radius: 0;
+                border-top-left-radius: $select-border-radius;
+                border-bottom-left-radius: $select-border-radius;
+            }
+        }
+    }
+    .#{$css-prefix}select-list{
+        position: absolute;
+        left: 0;
+        top: 29px;
+        background-color: $select-bg;
+        line-height: 24px;
+        border: 1px solid $select-border-color;
+        border-radius: $select-list-border-radius;
+        box-sizing: border-box;
+        min-width: 100%;
+        max-height: 250px;
+        overflow-x: auto;
+        .#{$css-prefix}select-list-item{
+            height: 24px;
+            padding: 0 40px 0 20px;
+            cursor: pointer;
+            position: relative;
+            white-space: nowrap;
+            &.first{
+                border-top-left-radius: $select-list-border-radius - 1;
+                border-top-right-radius: $select-list-border-radius - 1;
+            }
+            &.last{
+                border-bottom-left-radius: $select-list-border-radius - 1;
+                border-bottom-right-radius: $select-list-border-radius - 1;
+            }
+            &.selected,
+            &:hover{
+                background-color: #e5e5e5;
+            }
+            .#{$css-prefix}select-list-item-icon{
+                @extend .icon-check;
+                position: absolute;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                width: 20px;
+                opacity: 0;
+                font-size: 12px!important;
+                text-align: center;
+                color: #333;
+            }
+        }
+
+    }
+    .#{$css-prefix}select-search-bar{
+        padding: 5px;
+        input{
+            border-radius: $select-border-radius;
+            border: 1px solid $select-border-color;
+            height: 24px;
+            line-height: 24px;
+            width: 100%;
+            padding: 0 3px;
+            &:focus{
+                outline: 0;
+            }
+        }
+    }
+
+    // 搜索框
+    .#{$css-prefix}select-input-wrap{
+        min-width: $select-search-width;
+        width: $select-width;
+        height: $select-height;
+        line-height: $select-height - 2px;
+        border: 1px solid $select-border-color;
+        border-radius: $select-border-radius;
+        display: inline-block;
+        padding: 0 $select-icon-width 0 0;
+        @extend .relative;
+        .#{$css-prefix}select-input{
+            float: left;
+            border: 0;
+            height: $select-height - 2px;
+            width: 100%;
+            border-radius: $select-border-radius;
+            padding: 5px;
+            &:focus{
+                outline: 0;
+            }
+        }
+        .#{$css-prefix}select-icon{
+            @extend .icon-search;
+            cursor: pointer;
+        }
+    }
+}
+
+
+.#{$css-prefix}select-wrap-primary{
+    @extend .#{$css-prefix}select-wrap;
+    .#{$css-prefix}select-value{
+        background-color: $primary-color;
+        border: 1px solid $primary-color;
+        color: #fff;
+        .#{$css-prefix}select-icon{
+            background-color: $primary-color;
+            border-left: 1px solid $primary-color;
+            color: #fff;
+        }
+    }
+}
+
+.#{$css-prefix}select-wrap-primary-hollow{
+    @extend .#{$css-prefix}select-wrap;
+    .#{$css-prefix}select-value{
+        border: 1px solid $primary-color;
+        color: $primary-color;
+        .#{$css-prefix}select-value-inner{
+            color: $primary-color;
+        }
+        .#{$css-prefix}select-icon{
+            color: $primary-color;
+        }
+    }
+}

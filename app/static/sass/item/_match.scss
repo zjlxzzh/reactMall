@@ -1,0 +1,15 @@
+@charset "utf-8";
+
+.#{$css-prefix}match-bar{
+    @extend .relative;
+    height: $match-height;
+    border: 1px solid $match-border-color;
+    background-color: $match-bg-color;
+    width: 100%;
+    .#{$css-prefix}matched{
+        @extend .absolute;
+        top: 0;
+        bottom: 0;
+        background-color: $match-color;
+    }
+}

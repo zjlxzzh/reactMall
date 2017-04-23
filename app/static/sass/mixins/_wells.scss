@@ -1,0 +1,11 @@
+@charset "utf-8";
+@mixin wells($color:$wells-primary-color, $background-color:$wells-primary-background-color, $border-color: $wells-primary-border-color){
+    color: $color;
+    background-color: $background-color;
+    border: 1px solid $border-color;
+    border-radius: $wells-border-radius;
+    display: block;
+    padding: 5px;
+    text-align: center;
+    transition: background-color .5s, border-color .5s;
+};

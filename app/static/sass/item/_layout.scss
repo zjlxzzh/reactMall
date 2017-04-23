@@ -1,0 +1,11 @@
+@charset "utf-8";
+
+@import "../mixins/layout";
+
+.row{
+	width: 100%;
+    display: block;
+    @extend .clearfix;
+}
+
+@include col();

@@ -1,0 +1,162 @@
+@charset "utf-8";
+
+h1,.h1{
+    font-size: $font-size-logo;
+    color: $font-color-darker;
+}
+
+h2,.h2{
+    font-size: $font-size-h2;
+}
+
+h3,.h3{
+    font-size: $font-size-h3;
+}
+
+.f-family-number{
+    font-family: $font-family-number;
+}
+
+.f-10{
+    font-size: 10px;
+}
+.f-12{
+    font-size: 12px;
+}
+.f-13{
+    font-size: 13px;
+}
+.f-14{
+    font-size: 14px!important;
+}
+.f-16{
+  font-size: 16px;
+}
+.f-18{
+    font-size: 18px!important;
+}
+.f-20{
+    font-size: 20px!important;
+}
+.f-22{
+    font-size: 22px!important;
+}
+.f-24{
+	font-size: 24px;
+}
+.fw-100{
+    font-weight: 100!important;
+}
+.fw-200{
+    font-weight: 200!important;
+}
+.fw-300{
+    font-weight: 300!important;
+}
+.fw-400{
+    font-weight: 400!important;
+}
+.fw-bold{
+    font-weight: bold!important;
+}
+
+.text-ellipsis{
+  -ms-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.text-left{
+    text-align: left!important;
+}
+.text-right{
+    text-align: right!important;
+}
+.text-center{
+    text-align: center!important;
+}
+.vertical-top{
+    vertical-align: top!important;
+}
+.vertical-middle{
+    vertical-align: middle!important;
+}
+.vertical-bottom{
+    vertical-align: bottom!important;
+}
+.decoration-none{
+    text-decoration: none;
+}
+
+.darker{
+	color: $font-color-darker;
+}
+.dark{
+	color: $font-color-dark;
+}
+.grayer{
+	color: $font-color-grayer;
+}
+.gray{
+	color: $font-color-gray;
+}
+.link{
+	color: $font-color-link;
+}
+.link-hover{
+	color: $font-color-link-hover;
+}
+.primary-light{
+    color: #6da0e4;
+}
+.primary{
+	color: $primary-color;
+}
+.success{
+    color: $success-color;
+}
+.warning{
+    color: $warning-color;
+}
+.danger{
+    color: $danger-color;
+}
+.white{
+    color: $font-color-white;
+}
+
+.line-height-14{
+    line-height: 14px;
+}
+.line-height-16{
+    line-height: 16px;
+}
+.line-height-22{
+    line-height: 22px;
+}
+.line-height-28{
+    line-height: 28px;
+}
+.line-height-30{
+    line-height: 30px;
+}
+.line-height-35{
+    line-height: 35px;
+}
+.line-height-40{
+    line-height: 40px;
+}
+.line-height-42{
+    line-height: 42px;
+}
+.line-height-45{
+    line-height: 45px;
+}
+.line-height-50{
+    line-height: 50px;
+}
+
+.pointer{
+  cursor: pointer;
+}

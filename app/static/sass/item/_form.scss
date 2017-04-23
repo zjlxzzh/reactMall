@@ -1,0 +1,13 @@
+@charset "utf-8";
+
+@import "../mixins/form";
+
+.#{$css-prefix}input{
+    @include input();
+}
+
+.#{$css-prefix}textarea{
+    @include input($height: 4.5em);
+    line-height: 1.5em;
+}
+

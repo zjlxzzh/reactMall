@@ -1,0 +1,108 @@
+@charset "utf-8";
+@-webkit-keyframes loadingCircle{
+    0%{
+        @include transform-origin(50% 50%);
+        @include transform(rotate(0deg));
+    }
+    100%{
+        @include transform-origin(50% 50%);
+        @include transform(rotate(360deg));
+    }
+}
+@keyframes loadingCircle{
+    0%{
+        @include transform-origin(50% 50%);
+        @include transform(rotate(0deg));
+    }
+    100%{
+        @include transform-origin(50% 50%);
+        @include transform(rotate(360deg));
+    }
+}
+
+@keyframes loadingPointer1{
+    0%{
+        opacity: 0;
+    }
+    24%{
+        opacity: 1;
+    }
+    75%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+@keyframes loadingPointer2{
+    0%{
+        opacity: 0;
+    }
+    25%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+    75%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+@keyframes loadingPointer3{
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 0;
+    }
+    75%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+
+
+
+@keyframes loadingPointert1{
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+@keyframes loadingPointert2{
+    0%{
+        opacity: 0;
+    }
+    25%{
+        opacity: 0;
+    }
+    75%{
+        opacity: 1;
+    }
+}
+
+@keyframes loadingPointert3{
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}

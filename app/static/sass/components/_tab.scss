@@ -1,0 +1,45 @@
+@charset "utf-8";
+
+.#{$css-prefix}tabHide{display:none;}
+.#{$css-prefix}tab{
+    width:100%;
+    a, a:hover{
+        @extend .decoration-none;
+    }
+    .tab-menu{
+        @extend .clearfix;
+        .menu-item{
+            float:left;
+            margin: 0 20px;
+            font-weight: 100;
+            a{
+                float: left;
+                color: #666;
+                padding: 18px 5px 15px;
+            }
+            &.active,
+            &.checked{
+                margin-bottom:-1px;
+                border-bottom: 2px solid #515974;
+                border-radius:4px 4px 0 0;
+                font-weight: 900;
+                a{
+                    color: #515974;
+                }
+            }
+        }
+    }
+    .tab-con{
+        margin-bottom:10px;
+        .con-item{
+            display:none;
+        }
+        .showCon{
+            display:block;
+        }
+    }
+    .loading{
+        display:block;
+        margin:0 auto;
+    }
+}

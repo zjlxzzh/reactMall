@@ -1,0 +1,33 @@
+@charset "utf-8";
+
+@mixin pt($p){
+    padding-top: $p;
+}
+@mixin pr($p){
+    padding-right: $p;
+}
+@mixin pb($p){
+    padding-bottom: $p;
+}
+@mixin pl($p){
+    padding-left: $p;
+}
+@mixin mt($m){
+    margin-top: $m;
+}
+@mixin mr($m){
+    margin-right: $m;
+}
+@mixin mb($m){
+    margin-bottom: $m;
+}
+@mixin ml($m){
+    margin-left: $m;
+}
+
+@mixin relative(){
+    position: relative;
+}
+@mixin absolute(){
+    position: absolute;
+}

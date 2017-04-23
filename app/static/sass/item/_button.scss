@@ -1,0 +1,148 @@
+@charset "utf-8";
+
+@import "../mixins/button";
+
+.#{$css-prefix}button{
+    @include button();
+}
+
+.#{$css-prefix}button-primary{
+    @include button($button-primary-background-color, $button-primary-color, $button-primary-border-color);
+}
+
+.#{$css-prefix}button-success{
+    @include button($button-success-background-color, $button-success-color, $button-success-border-color);
+}
+
+.#{$css-prefix}button-danger{
+    @include button($button-danger-background-color, $button-danger-color, $button-danger-border-color);
+}
+
+.#{$css-prefix}button-warning{
+    @include button($button-warning-background-color, $button-warning-color, $button-warning-border-color);
+}
+
+.#{$css-prefix}button-info{
+    @include button($button-info-background-color, $button-info-color, $button-info-border-color);
+}
+
+.#{$css-prefix}button-primary-hollow{
+    @include button($button-hollow-background-color, $button-primary-hollow-color, $button-primary-hollow-border-color)
+}
+
+.#{$css-prefix}button-danger-hollow{
+    @include button($button-hollow-background-color, $button-danger-hollow-color, $button-danger-hollow-border-color)
+}
+
+.#{$css-prefix}button-ghost{
+    @include button($button-ghost-background-color, $button-ghost-color, $button-ghost-border-color)
+}
+.#{$css-prefix}button-disable{
+    @include button($button-disable-background-color, $button-disable-color, $button-disable-border-color);
+    cursor: not-allowed;
+}
+
+.#{$css-prefix}button-large{
+    @include button-size($button-large-height, $button-large-font-size, $button-large-padding-LR);
+}
+
+.#{$css-prefix}button-small{
+    @include button-size($button-small-height, $button-small-font-size, $button-small-padding-LR);
+}
+
+.#{$css-prefix}upload{
+    position: relative;
+    overflow: hidden;
+    input[type="file"]{
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        font-size: 300px;
+        opacity: 0;
+        cursor: pointer;
+    }
+}
+
+.#{$css-prefix}button-group{
+    @extend .clearfix;
+    display: inline-block;
+    .#{$css-prefix}button{
+        float: left;
+        border-radius: 0;
+        border-right-width: 0;
+        padding: 0 30px;
+        transition: background-color .5s, border-color .5s;
+        &:first-child{
+            border-bottom-left-radius: $button-border-radius;
+            border-top-left-radius: $button-border-radius;
+        }
+        &:last-child{
+            border-bottom-right-radius: $button-border-radius;
+            border-top-right-radius: $button-border-radius;
+            border-right-width: 1px;
+        }
+        &.vb-button-primary{
+            position: relative;
+            margin-right: -1px;
+        }
+    }
+}
+
+.#{$css-prefix}button-group-large{
+    .#{$css-prefix}button{
+        @extend .#{$css-prefix}button-large;
+    }
+}
+
+.#{$css-prefix}button-group-small{
+    .#{$css-prefix}button{
+        padding: 0 $button-default-padding-LR;
+        @extend .#{$css-prefix}button-small;
+    }
+}
+
+.#{$css-prefix}button-switch{
+    @extend .pointer;
+    display: inline-block;
+    border: 1px solid $border-color-default;
+    border-radius: $border-radius / 2;
+    height: 24px;
+    width: 46px;
+    .#{$css-prefix}switch-point{
+        display: inline-block;
+        border-radius: $border-radius / 2 - 2;
+        height: 16px;
+        width: 16px;
+        margin: 3px;
+        position: relative;
+        @include transition(all .1s);
+    }
+    &.open{
+        .#{$css-prefix}switch-point{
+            background-color: $primary-color;
+            left: 0;
+        }
+    }
+    &.close{
+        .#{$css-prefix}switch-point{
+            background-color: #c9c9c9;
+            left: 22px;
+        }
+    }
+}
+
+.#{$css-prefix}button-group-input{
+    @extend .#{$css-prefix}button-group;
+    .#{$css-prefix}button{
+        padding: 0 15px;
+    }
+    .#{$css-prefix}input{
+        @extend .text-center;
+        border-bottom-left-radius: 0;
+        border-top-left-radius: 0;
+        width: 60px;
+        height: $button-default-height;
+        line-height: $button-default-height - 2;
+    }
+}

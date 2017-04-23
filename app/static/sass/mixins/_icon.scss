@@ -1,0 +1,8 @@
+@charset "utf-8";
+
+@mixin iconfont($content){
+    @extend .iconfont;
+    &:before{
+        content: $content;
+    }
+}
