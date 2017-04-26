@@ -1,31 +1,26 @@
 import React from 'react';
 import { Table, Icon } from 'antd';
 
+const data = [{
+    key: '1',
+    tractName: '合同_新疆大枣 共 1 件',
+    accName: '上海泰顺食品销售有限公司',
+    revTypeIdName: '一次性付清',
+    payStatus: '已付',
+    totalRevenue: '¥60',
+    disTypeId: '2017-4-24',
+    tractDuration: '30',
+    orderCount: '微信',
+}];
 
 const columns = [{
-    title: '服务商名称',
-    dataIndex: 'accName',
-    key: 'accName',
-}, {
     title: '合同名称',
     dataIndex: 'tractName',
     key: 'tractName',
-}, {
-    title: '合同期限',
-    dataIndex: 'tractDuration',
-    key: 'tractDuration',
-}, {
-    title: '合同总额',
-    dataIndex: 'totalRevenue',
-    key: 'totalRevenue',
 },{
-    title: '折扣',
-    dataIndex: 'disTypeId',
-    key: 'disTypeId',
-},{
-    title: '订单数量',
-    dataIndex: 'orderCount',
-    key: 'orderCount',
+    title: '服务商名称',
+    dataIndex: 'accName',
+    key: 'accName',
 },{
     title: '付款方式',
     dataIndex: 'revTypeIdName',
@@ -34,40 +29,26 @@ const columns = [{
     title: '付款状态',
     dataIndex: 'payStatus',
     key: 'payStatus',
+    width:0,
+}, {
+    title: '应付金额',
+    dataIndex: 'totalRevenue',
+    key: 'totalRevenue',
+},{
+    title: '应付日期',
+    dataIndex: 'disTypeId',
+    key: 'disTypeId',
+}, {
+    title: '剩余天数',
+    dataIndex: 'tractDuration',
+    key: 'tractDuration',
+},{
+    title: '付款渠道',
+    dataIndex: 'orderCount',
+    key: 'orderCount',
 }];
 
-const data = [{
-    key: '1',
-    accName: 'John Brown',
-    tractName: 32,
-    tractDuration: 'New York No. 1 Lake Park33',
-    totalRevenue: 'N',
-    disTypeId: 'N',
-    orderCount: 'N',
-    revTypeIdName: 'N',
-    payStatus: 'N',
 
-}, {
-    key: '2',
-    accName: 'John Brown',
-    tractName: 32,
-    tractDuration: 'New York No. 1 Lake Park33',
-    totalRevenue: 'N',
-    disTypeId: 'N',
-    orderCount: 'N',
-    revTypeIdName: 'N',
-    payStatus: 'N',
-}, {
-    key: '3',
-    accName: 'John Brown',
-    tractName: 32,
-    tractDuration: 'New York No. 1 Lake Park33',
-    totalRevenue: 'N',
-    disTypeId: 'N',
-    orderCount: 'N',
-    revTypeIdName: 'N',
-    payStatus: 'N',
-}];
 
 const rowSelection = {
     onChange: (selectedRowKeys, selectedRows) => {
@@ -86,7 +67,7 @@ const rowSelection = {
 
 
 
-export default class myTrade extends React.Component{
+export default class myPayment extends React.Component{
     constructor(props){
         super(props);
     this.state = {

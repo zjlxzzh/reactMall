@@ -82,10 +82,14 @@ html, body{
             padding-top: $header-height;
             padding-left: $aside-width;
             .#{$css-prefix}main{
-                padding: 20px;
-                margin: 20px;
+                padding: 0 20px 20px 20px;
+                margin:20px;
                 min-height: 100%;
                 background-color: $main-background-color;
+                .#{$css-prefix}breadCrumb{
+                    height: 40px;
+                    line-height: 40px;
+                }
             }
         }
     }
