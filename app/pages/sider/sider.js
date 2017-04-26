@@ -1,5 +1,6 @@
 import React from 'react';
-import { Menu, Icon, Switch } from 'antd'
+import { Menu, Icon, Switch } from 'antd';
+import {Link} from 'react-router';
 import '../../static/sass/side.scss';
 const SubMenu = Menu.SubMenu;
 
@@ -15,9 +16,9 @@ export default class Sider extends React.Component{
                     mode="inline"
                 >
                     <SubMenu key="sub1" title={<span><Icon type="setting" /><span className="fw-bold f-14">管理系统</span></span>}>
-                        <Menu.Item key="1">我的交易</Menu.Item>
-                        <Menu.Item key="2">我的申请</Menu.Item>
-                        <Menu.Item key="3">我的收款</Menu.Item>
+                        <Menu.Item key="1"><Link to="/myTrade">我的交易</Link></Menu.Item>
+                        <Menu.Item key="2"><Link to="/myApplication">我的申请</Link></Menu.Item>
+                        <Menu.Item key="3"><Link to="/myDebit">我的收款</Link></Menu.Item>
                         <Menu.Item key="4">发票管理</Menu.Item>
                         <Menu.Item key="5">需求管理</Menu.Item>
                         <Menu.Item key="6">服务产品发布</Menu.Item>

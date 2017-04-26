@@ -70,7 +70,7 @@ export default class Header extends React.Component{
                         <Icon type="shopping-cart" />服务商城
                     </Menu.Item>
                     <Menu.Item key="center" className="f-14 white">
-                        <Icon type="solution" />服务商中心
+                        <Icon type="solution" />用户中心
                     </Menu.Item>
                 </Menu>
             </div>
@@ -98,7 +98,7 @@ export default class Header extends React.Component{
     //退出
     getLogout(){
          return(
-             <a href="javascript;" className="pull-right f-14 gray"><Icon type="logout" /></a>
+             <a href="javascript;" className="pull-right f-14 gray" title="退出"><Icon type="logout" /></a>
          );
     }
 

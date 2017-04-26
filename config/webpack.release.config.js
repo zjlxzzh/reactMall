@@ -3,20 +3,16 @@ const Clean = require('clean-webpack-plugin')
     , ExtractTextPlugin = require("extract-text-webpack-plugin")
     , HtmlWebpackPlugin = require('html-webpack-plugin')
     , webpack = require('webpack')
-    , ProgressBarPlugin = require('progress-bar-webpack-plugin');
+    , NyanProgressPlugin = require('nyan-progress-webpack-plugin');
 
     module.exports = {
         entry: {
-            main:[
-                "webpack-dev-server/client?http://localhost:9090",
-                "webpack/hot/only-dev-server",
-                path.resolve(__dirname, 'main.js')
-            ],
+            main: path.resolve(__dirname, 'main.js'),
             vendor: ['react', 'react-dom', 'moment','antd','react-router'],
         },
         output: {
             path: path.resolve(__dirname, 'build'),
-            filename: '[name].[hash:8].js', //chunkHash
+            filename: '[name].[chunkHash:8].js',
             // publicPath: './'
         },
         module: {
@@ -24,10 +20,10 @@ const Clean = require('clean-webpack-plugin')
                 {
                     test: /\.js?$/,
                     exclude: /node_modules/,
-                    loaders: ['react-hot-loader', 'babel-loader?presets[]=react,presets[]=es2015']
-                    // query: {
-                    //     presets: ['es2015','react']
-                    // }
+                    loader: 'babel-loader',
+                    query: {
+                        presets: ['es2015','react']
+                    }
                 },
                 {
                     test: /\.(png|jpg|gif)$/,
@@ -42,11 +38,11 @@ const Clean = require('clean-webpack-plugin')
                 },
                 {
                     test: /\.scss$/,
-                    // use: ExtractTextPlugin.extract({
-                    //     fallback: "style-loader",
-                    //     use: "css-loader!sass-loader"
-                    // })
-                    loader: 'style-loader!css-loader!sass-loader?sourceMap'
+                    use: ExtractTextPlugin.extract({
+                        fallback: "style-loader",
+                        use: "css-loader!sass-loader"
+                    })
+                    // loader: 'style-loader!css-loader!sass-loader?sourceMap'
                 },
                 {
                     test: /\.(ttf|eot|svg|woff|woff2)$/,
@@ -54,16 +50,16 @@ const Clean = require('clean-webpack-plugin')
                 }
             ]
         },
-        devServer: {
-            contentBase: '../',
-            port: 9090,
-            inline: true,
-            historyApiFallback:true,
-            hot:true
-        },
+        // devServer: {
+        //     contentBase: '../',
+        //     port: 9090,
+        //     inline: true,
+        //     historyApiFallback:true,
+        //     hot:true
+        // },
         plugins: [
             new Clean(['build']),
-            new ProgressBarPlugin(),
+            new NyanProgressPlugin(),
             new ExtractTextPlugin("style.[chunkHash:8].css"),
             new HtmlWebpackPlugin({
                 filename: 'index.html',

@@ -16,7 +16,7 @@ $disable-color:                 #cecece !default;
 
 /******************************  start layout  ******************************/
 $layout-bg:						#fff !default;
-$layout-max-width:              1440px !default;
+$layout-max-width:              100% !default;
 $layout-min-width:              1280px !default;
 
 $header-height:             	70px !default;
@@ -57,7 +57,7 @@ $aside-sub-item-active-bg:  $aside-item-active-bg !default;
 $aside-sub-item-active-color:$aside-item-active-color !default;
 
 $contain-width:             100% !default;
-$contain-bg:                $layout-bg !default;
+$contain-bg:                #f0f3f6 !default;
 $contain-border-left-color: $aside-border-right-color !default;
 $contain-padding-top:       $header-height !default;
 $contain-padding-lr:        $header-padding-lr !default;
@@ -86,7 +86,7 @@ $font-color-darker:         $font-color-base !default;
 $font-color-dark:           #666 !default;
 $font-color-grayer:         #999 !default;
 $font-color-gray:           #cecece !default;
-$font-color-link:           #3a75c4 !default;
+$font-color-link:           #108ee9 !default;
 $font-color-link-hover:     #e36837 !default;
 
 /****  font size  ****/
@@ -103,7 +103,7 @@ $font-size-h3:              18px !default;
 /****  font line height  ****/
 $font-line-height-default:  1.5 !default;
 
-$font-text-decoration:      underline !default;
+$font-text-decoration:      none !default;
 
 /******************************  end font  ******************************/
 
