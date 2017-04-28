@@ -1,5 +1,5 @@
 ﻿import React from 'react';
-import {Row,Col,Menu, Icon, Switch} from 'antd';
+import {Row,Col,Menu, Icon} from 'antd';
 import '../../static/sass/header.scss';
 
 
@@ -98,7 +98,7 @@ export default class Header extends React.Component{
     //退出
     getLogout(){
          return(
-             <a href="javascript;" className="pull-right f-14 gray" title="退出"><Icon type="logout" /></a>
+             <a href="javascript:;" className="pull-right f-14 gray" title="退出"><Icon type="logout" /></a>
          );
     }
 
