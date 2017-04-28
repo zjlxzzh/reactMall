@@ -13,7 +13,6 @@ const Clean = require('clean-webpack-plugin')
         output: {
             path: path.resolve(__dirname, 'build'),
             filename: '[name].[chunkHash:8].js',
-            // publicPath: './'
         },
         module: {
             loaders: [
