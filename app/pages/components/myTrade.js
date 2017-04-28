@@ -36,7 +36,7 @@ const columns = [{
     dataIndex: 'payStatus',
     key: 'payStatus',
 }];
- 
+
 const data = [];
 
 const rowSelection = {
