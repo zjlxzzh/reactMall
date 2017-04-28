@@ -16,8 +16,7 @@ const Clean = require('clean-webpack-plugin')
         },
         output: {
             path: path.resolve(__dirname, 'build'),
-            filename: '[name].[hash:8].js', //chunkHash
-            // publicPath: './'
+            filename: '[name].[hash:8].js',
         },
         module: {
             loaders: [
@@ -25,27 +24,16 @@ const Clean = require('clean-webpack-plugin')
                     test: /\.js?$/,
                     exclude: /node_modules/,
                     loaders: ['react-hot-loader', 'babel-loader?presets[]=react,presets[]=es2015']
-                    // query: {
-                    //     presets: ['es2015','react']
-                    // }
                 },
                 {
                     test: /\.(png|jpg|gif)$/,
                     loader: 'url-loader?limit=0'
                 },
                 {   test: /\.css$/,
-                    // use: ExtractTextPlugin.extract({
-                    //     fallback: "style-loader",
-                    //     use: "css-loader?sourceMap"
-                    // })
                     loader: 'style-loader!css-loader?sourceMap'
                 },
                 {
                     test: /\.scss$/,
-                    // use: ExtractTextPlugin.extract({
-                    //     fallback: "style-loader",
-                    //     use: "css-loader!sass-loader"
-                    // })
                     loader: 'style-loader!css-loader!sass-loader?sourceMap'
                 },
                 {
@@ -62,7 +50,6 @@ const Clean = require('clean-webpack-plugin')
             hot:true
         },
         plugins: [
-            new Clean(['build']),
             new ProgressBarPlugin(),
             new ExtractTextPlugin("style.[chunkHash:8].css"),
             new HtmlWebpackPlugin({

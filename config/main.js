@@ -1,3 +1,4 @@
+//react库
 import React from 'react';
 import ReactDOM  from 'react-dom';
 import { Router, Route, Link, hashHistory, IndexRoute, Redirect, IndexLink} from 'react-router'
@@ -12,7 +13,7 @@ import Sider from '../app/pages/sider/sider';
 import MyBreadCrumb from '../app/pages/components/myBreadCrumb';
 import myTrade from '../app/pages/components/myTrade';
 import myPayment from '../app/pages/components/myPayment';
-import myApplication from '../app/pages/components/myApplication';
+import myRequirement from '../app/pages/components/myRequirement';
 
 
 
@@ -48,7 +49,7 @@ ReactDOM.render((
         <IndexRoute  component={myTrade} />
         <Route path="myTrade" component={myTrade}/>
         <Route path="myPayment" component={myPayment}/>
-        <Route path="myApplication" component={myApplication}/>
+        <Route path="myRequirement" component={myRequirement}/>
     </Route>
 </Router>
 ), document.getElementById('app'));

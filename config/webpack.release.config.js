@@ -3,7 +3,7 @@ const Clean = require('clean-webpack-plugin')
     , ExtractTextPlugin = require("extract-text-webpack-plugin")
     , HtmlWebpackPlugin = require('html-webpack-plugin')
     , webpack = require('webpack')
-    , NyanProgressPlugin = require('nyan-progress-webpack-plugin');
+    , ProgressBarPlugin = require('progress-bar-webpack-plugin');
 
     module.exports = {
         entry: {
@@ -30,10 +30,6 @@ const Clean = require('clean-webpack-plugin')
                     loader: 'url-loader?limit=0'
                 },
                 {   test: /\.css$/,
-                    // use: ExtractTextPlugin.extract({
-                    //     fallback: "style-loader",
-                    //     use: "css-loader?sourceMap"
-                    // })
                     loader: 'style-loader!css-loader?sourceMap'
                 },
                 {
@@ -42,7 +38,6 @@ const Clean = require('clean-webpack-plugin')
                         fallback: "style-loader",
                         use: "css-loader!sass-loader"
                     })
-                    // loader: 'style-loader!css-loader!sass-loader?sourceMap'
                 },
                 {
                     test: /\.(ttf|eot|svg|woff|woff2)$/,
@@ -50,16 +45,9 @@ const Clean = require('clean-webpack-plugin')
                 }
             ]
         },
-        // devServer: {
-        //     contentBase: '../',
-        //     port: 9090,
-        //     inline: true,
-        //     historyApiFallback:true,
-        //     hot:true
-        // },
         plugins: [
             new Clean(['build']),
-            new NyanProgressPlugin(),
+            new ProgressBarPlugin(),
             new ExtractTextPlugin("style.[chunkHash:8].css"),
             new HtmlWebpackPlugin({
                 filename: 'index.html',
