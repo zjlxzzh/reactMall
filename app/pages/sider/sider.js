@@ -25,10 +25,10 @@ const data = [
                     key:'SMALL',
                     smallMenu: [
                         {title:'我的交易', key:'myTrade'},
-                        {title:'我的申请', key:'myApplication'},
-                        {title:'我的收款', key:'myCash'},
+                        // {title:'我的申请', key:'myApplication'},
+                        {title:'我的收款', key:'myPayment'},
                         // {title:'发票管理', key:'myInvoices'},
-                        // {title:'需求管理', key:'myRequirement'},
+                        {title:'需求管理', key:'myRequirement'},
                         // {title:'服务产品发布', key:'productRelease'},
                         // {title:'服务产品管理', key:'productManagement'},
                         // {title:'商城设置', key:'mallSettings'},

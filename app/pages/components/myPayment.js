@@ -1,17 +1,12 @@
 import React from 'react';
 import { Table, Icon } from 'antd';
 
-const data = [{
-    key: '1',
-    tractName: '合同_新疆大枣 共 1 件',
-    accName: '上海泰顺食品销售有限公司',
-    revTypeIdName: '一次性付清',
-    payStatus: '已付',
-    totalRevenue: '¥60',
-    disTypeId: '2017-4-24',
-    tractDuration: '30',
-    orderCount: '微信',
-}];
+
+
+
+
+
+
 
 const columns = [{
     title: '合同名称',
@@ -50,6 +45,10 @@ const columns = [{
 
 
 
+
+
+
+
 const rowSelection = {
     onChange: (selectedRowKeys, selectedRows) => {
         console.log(`selectedRowKeys: ${selectedRowKeys}`, 'selectedRows: ', selectedRows);
@@ -65,7 +64,7 @@ const rowSelection = {
     }),
 };
 
-
+const data = [];
 
 export default class myPayment extends React.Component{
     constructor(props){
@@ -75,6 +74,29 @@ export default class myPayment extends React.Component{
         sortedInfo: null,
     };
 }
+
+
+    componentDidMount() {
+        for (let i = 0; i < 46; i++) {
+            data.push({
+                key: i,
+                tractName: '合同_新疆大枣 共 1 件',
+                accName: `上海泰顺食品销售有限公司${i}`,
+                revTypeIdName: '一次性付清',
+                payStatus: '已付',
+                totalRevenue: '¥60',
+                disTypeId: '2017-4-24',
+                tractDuration: '30',
+                orderCount: '微信',
+            })
+        }
+    }
+
+
+
+
+
+
 
     render() {
         return (

@@ -18,6 +18,7 @@ const columns = [{
     title: '合同总额',
     dataIndex: 'totalRevenue',
     key: 'totalRevenue',
+    sorter: (a, b) => a.totalRevenue.replace('¥','') - b.totalRevenue.replace('¥',''),
 },{
     title: '折扣',
     dataIndex: 'disTypeId',
@@ -36,38 +37,7 @@ const columns = [{
     key: 'payStatus',
 }];
 
-const data = [{
-    key: '1',
-    accName: 'John Brown',
-    tractName: 32,
-    tractDuration: 'New York No. 1 Lake Park33',
-    totalRevenue: 'N',
-    disTypeId: 'N',
-    orderCount: 'N',
-    revTypeIdName: 'N',
-    payStatus: 'N',
-
-}, {
-    key: '2',
-    accName: 'John Brown',
-    tractName: 32,
-    tractDuration: 'New York No. 1 Lake Park33',
-    totalRevenue: 'N',
-    disTypeId: 'N',
-    orderCount: 'N',
-    revTypeIdName: 'N',
-    payStatus: 'N',
-}, {
-    key: '3',
-    accName: 'John Brown',
-    tractName: 32,
-    tractDuration: 'New York No. 1 Lake Park33',
-    totalRevenue: 'N',
-    disTypeId: 'N',
-    orderCount: 'N',
-    revTypeIdName: 'N',
-    payStatus: 'N',
-}];
+const data = [];
 
 const rowSelection = {
     onChange: (selectedRowKeys, selectedRows) => {
@@ -84,7 +54,9 @@ const rowSelection = {
     }),
 };
 
-
+function onChange(pagination , sorter) {
+    console.log('params', pagination, sorter);
+}
 
 export default class myTrade extends React.Component{
     constructor(props){
@@ -95,9 +67,27 @@ export default class myTrade extends React.Component{
     };
 }
 
+
+    componentWillMount(){
+        for(let i=1;i<30;i++){
+            data.push({
+                key: i,
+                accName: '上海津全贸易有限公司',
+                tractName: `合同_柚子共${i}件`,
+                tractDuration: 32,
+                totalRevenue: `¥${80*i}`,
+                disTypeId: 0,
+                orderCount: 1,
+                revTypeIdName: '分期',
+                payStatus: '未付款',
+            })
+        }
+}
+
+
     render() {
         return (
-        <Table rowSelection={rowSelection} columns={columns} dataSource={data} />
+        <Table rowSelection={rowSelection} columns={columns} dataSource={data} onChange={onChange} />
         );
     }
 
