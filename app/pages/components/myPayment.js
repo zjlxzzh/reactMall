@@ -1,6 +1,6 @@
 import React from 'react';
 import { Table, Icon } from 'antd';
-
+import {Link} from 'react-keeper';
 
 
 
@@ -12,6 +12,7 @@ const columns = [{
     title: '合同名称',
     dataIndex: 'tractName',
     key: 'tractName',
+     render: (text, record) => <Link to={ '/list/'+record.key}>{record.tractName}</Link>,
 },{
     title: '服务商名称',
     dataIndex: 'accName',
@@ -76,7 +77,9 @@ export default class myPayment extends React.Component{
 }
 
 
-    componentDidMount() {
+
+
+    componentWillMount() {
         for (let i = 0; i < 46; i++) {
             data.push({
                 key: i,

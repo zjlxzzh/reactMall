@@ -1,7 +1,8 @@
 //react库
 import React from 'react';
 import ReactDOM  from 'react-dom';
-import { Router, Route, Link, hashHistory, IndexRoute, Redirect, IndexLink} from 'react-router'
+// import { Router, Route, Link, hashHistory,browserHistory, IndexRoute, Redirect, IndexLink} from 'react-router'
+import { HashRouter, Route } from 'react-keeper'
 
 //样式
 import 'antd/dist/antd.css';
@@ -15,6 +16,8 @@ import myTrade from '../app/pages/components/myTrade';
 import myPayment from '../app/pages/components/myPayment';
 import myRequirement from '../app/pages/components/myRequirement';
 
+import List from '../app/pages/components/list';
+
 
 
 class App extends React.Component {
@@ -27,6 +30,7 @@ class App extends React.Component {
 
     render() {
         return (
+            <HashRouter >
             <div className="fm-wrap">
             <Header />
             <Sider />
@@ -34,22 +38,18 @@ class App extends React.Component {
                     <div className="fm-content">
                         <div className="fm-main">
                             <MyBreadCrumb />
-                            { this.props.children }
+                                <Route index  component={myTrade} />
+                                <Route path="myTrade" component={myTrade}/>
+                                <Route cache path="myPayment" component={myPayment}/>
+                                <Route cache path="/list/:id" component={List} />
+                                <Route cache path="myRequirement" component={myRequirement}/>
                         </div>
                     </div>
                 </div>
             </div>
+            </HashRouter>
         );
     }
 }
 
-ReactDOM.render((
-<Router history={hashHistory} >
-    <Route path="/" component={App}>
-        <IndexRoute  component={myTrade} />
-        <Route path="myTrade" component={myTrade}/>
-        <Route path="myPayment" component={myPayment}/>
-        <Route path="myRequirement" component={myRequirement}/>
-    </Route>
-</Router>
-), document.getElementById('app'));
+ReactDOM.render(<App/>, document.getElementById('app'));
